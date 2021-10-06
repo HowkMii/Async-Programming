@@ -1,9 +1,7 @@
 void main() {
-  final f1  = Future((){
-    print(2);
-  });
+  final f1  = Future(info).then((value) => print(value));
   print(1);
 }
-void info(){
-  print(2);
+double info(){
+  return 2.0 ;
 }
