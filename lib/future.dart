@@ -1,8 +1,8 @@
 void main() {
   final f1  = Future(info);
-  f1.then((value) => print(value)).catchError((error)=>print(error));
+  f1.then((value) => print('value=$value')).catchError((error)=>print('error=$error'));
   print(1);
 }
 double info(){
-  return 2.0 ;
+  return double.parse('df4444') ;
 }
