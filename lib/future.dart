@@ -4,3 +4,6 @@ void main() {
   });
   print(1);
 }
+void info(){
+  print(2);
+}
