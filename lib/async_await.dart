@@ -1,10 +1,10 @@
-//this function is sync function
-void main() {
+//now is async function
+void main() async{
   /*  Future.delayed(Duration(seconds: 2),()=>2)
     .then((value)=>print('value=$value'))
     .catchError((e)=>print('error=$e'));
     print(1);  */
-    final Future<void>f1= Future.delayed(Duration(seconds: 2),()=>2)
+    final int value = await Future.delayed(Duration(seconds: 2),()=>2);
     .then((value)=>print('value=$value'))
     .catchError((e)=>print('error=$e'));
     print(1);
