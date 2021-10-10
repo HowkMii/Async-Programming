@@ -5,7 +5,7 @@ void main(){
 
 }
 
-fetchAlbum(){
+fetchAlbum()async{
   final url='https://jsonplaceholder.typicode.com/albums'; 
-  final Future<ht.Response> res=ht.get(Uri.parse(url));
+  final ht.Response res=await ht.get(Uri.parse(url));
 }
