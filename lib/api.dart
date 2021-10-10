@@ -7,5 +7,12 @@ void main(){
 
 fetchAlbum()async{
   final url='https://jsonplaceholder.typicode.com/albums'; 
-  final ht.Response res=await ht.get(Uri.parse(url));
+  final  res=await ht.get(Uri.parse(url));
+  
+  if (res.statusCode==200) {
+    res.body;
+    
+  }else{
+  throw Exception('Error!');
+  }
 }
