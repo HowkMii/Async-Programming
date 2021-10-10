@@ -6,13 +6,14 @@ void main(){
 
 }
 
-fetchAlbum()async{
+Future<dynamic> fetchAlbum()async{
   final url='https://jsonplaceholder.typicode.com/albums'; 
   final  res=await ht.get(Uri.parse(url));
   
   
   if (res.statusCode==200) {
     var obj=json.decode(res.body);
+    return obj;
   }else{
   throw Exception('Error!');
   }
