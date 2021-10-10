@@ -6,7 +6,7 @@ void main()async{
   var data=await fetchAlbum();
   
   for(var i=0;i<100;i++){
-  print(data[i]['title']);
+   print(data[i]['title']);
   }
 
 }
