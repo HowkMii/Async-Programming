@@ -1,8 +1,11 @@
 import 'dart:html';
 
+import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as ht;
 import 'dart:convert';
-void main(){
+void main()async{
+  var str=await fetchAlbum();
+  print(str);
 
 }
 
@@ -13,7 +16,7 @@ Future<dynamic> fetchAlbum()async{
   
   if (res.statusCode==200) {
     var obj=json.decode(res.body);
-    return obj;
+    return obj[0]['title'];
   }else{
   throw Exception('Error!');
   }
