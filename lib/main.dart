@@ -38,7 +38,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: FutureBuilder(
         future: ,
         builder:(ctx,snapShot){
-          
+          return Scaffold(
+            appBar: AppBar(title: Text("Demo"),),
+            body: Center(
+               
+            ),
+          );
         },
       ),
     );
