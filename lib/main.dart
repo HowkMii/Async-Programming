@@ -35,10 +35,11 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-        ),
+      body: FutureBuilder(
+        future: ,
+        builder:(ctx,snapShot){
+          
+        },
       ),
     );
   }
