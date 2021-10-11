@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
         future: Future.delayed(Duration(seconds: 1),()=> info(2)),
         builder:(ctx,snapShot){
           return Scaffold(
-            appBar: AppBar(title: Text(snapShot.hasData? "${snapShot.hasData}":"Demo")),
+            appBar: AppBar(title: Text(snapShot.hasData? "${snapShot.hasError}":"Demo")),
             body: Center(
                child: snapShot.connectionState ==ConnectionState.waiting?CircularProgressIndicator():Text("Done !"),
 
