@@ -48,9 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
           return Scaffold(
             appBar: AppBar(title: Text(snapShot.hasData? "${snapShot.hasData}":"Demo")),
             body: Center(
-               child: CircularProgressIndicator(
-                 
-               ),
+               child: snapShot.connectionState ==ConnectionState.waiting?,
+
+               
             ),
           );
         },
