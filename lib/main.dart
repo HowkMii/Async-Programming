@@ -2,9 +2,8 @@ import 'package:asyncp/async_await/future.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  final Future<int> myFuture =Future.delayed(Duration(seconds: 1),()=> info(2));
-  myFuture.then((value) => print(value)).catchError((err)=>print(err));
-  print(1);
+  
+
   runApp(MyApp());
 }
 int info(int a){
@@ -47,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
         future: Future.delayed(Duration(seconds: 1),()=> info(2)),
         builder:(ctx,snapShot){
           return Scaffold(
-            appBar: AppBar(title: Text("Demo"),),
+            appBar: AppBar(title: Text(snapShot.hasData? snapShot.hasData:"Demo")),
             body: Center(
                
             ),
